@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function MyFun(){
+        var n1 =document.getElementById("s1n").value;
+        var y1=document.getElementById("s1y").value;
+        var a1=document.getElementById("s1a").value;
+        var json1={name: n1 , year: y1,age : a1};
+
+        var n2 =document.getElementById("s2n").value;
+        var y2=document.getElementById("s2y").value;
+        var a2=document.getElementById("s2a").value;
+        var json2={name: n2 , year: y2,age : a2};
+
+        var n3 =document.getElementById("s3n").value;
+        var y3=document.getElementById("s3y").value;
+        var a3=document.getElementById("s3a").value;
+        var json3={name: n3 , year: y3,age : a3};
+        document.write("<h1>Student Details:</h1>");
+        document.write("<table border='5' width='50%'");
+        document .write("<tr> <td>"+json1.name+"</td><td>"+json1.year+"</td><td>"+json1.age+"</td></tr>");
+        document .write("<tr> <td>"+json2.name+"</td><td>"+json2.year+"</td><td>"+json2.age+"</td></tr>");
+        document .write("<tr> <td>"+json3.name+"</td><td>"+json3.year+"</td><td>"+json3.age+"</td></tr>");
+        document.write("</table");
+        var avg=parseInt(json1.age)+parseInt(json2.age)+parseInt(json3.age);
+        console.log(avg);
+        var avg=avg/3;
+        document .write("average age:"+avg);
+        console.log(avg);
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Student1</h1>
+    Name :<input type="text" id="s1n"><br>
+    Year :<input type="text" id="s1y"><br>
+    Age :<input type="text" id="s1a"><br>
+    <br>
+    <h1>Student2</h1>
+    Name :<input type="text" id="s2n"><br>
+    Year :<input type="text" id="s2y"><br>
+    Age :<input type="text" id="s2a"><br>
+    <br>
+    <h1>Student3</h1>
+    Name :<input type="text" id="s3n"><br>
+    Year :<input type="text" id="s3y"><br>
+    Age :<input type="text" id="s3a"><br>
+    <input type="button" name="btn-clk" value="Submit" onclick="MyFun()";>
+    <br>
+
+    
+
+    
+</body>
+</html>
